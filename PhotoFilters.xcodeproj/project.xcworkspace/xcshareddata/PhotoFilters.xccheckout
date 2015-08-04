@@ -12,6 +12,8 @@
 	<dict>
 		<key>148F9E391A394D700AB2B6DDA01792B0FBB57AB1</key>
 		<string>https://github.com/chauvincent/PassingDataWithDelegatesExercise.git</string>
+		<key>3AA508B5C4EC3C1E0276130D9D26F99BABBB1791</key>
+		<string>github.com:chauvincent/PhotoFilterApp.git</string>
 		<key>463E4E55C4250D34A5099947CC3CBDFE1AEAE2F2</key>
 		<string>https://github.com/chauvincent/PhotoFilterApp.git</string>
 	</dict>
@@ -21,15 +23,17 @@
 	<dict>
 		<key>148F9E391A394D700AB2B6DDA01792B0FBB57AB1</key>
 		<string>../../..</string>
-		<key>463E4E55C4250D34A5099947CC3CBDFE1AEAE2F2</key>
+		<key>3AA508B5C4EC3C1E0276130D9D26F99BABBB1791</key>
 		<string>../..</string>
+		<key>463E4E55C4250D34A5099947CC3CBDFE1AEAE2F2</key>
+		<string>../../../PhotoFilters</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/chauvincent/PhotoFilterApp.git</string>
+	<string>github.com:chauvincent/PhotoFilterApp.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>463E4E55C4250D34A5099947CC3CBDFE1AEAE2F2</string>
+	<string>3AA508B5C4EC3C1E0276130D9D26F99BABBB1791</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -39,6 +43,14 @@
 			<string>148F9E391A394D700AB2B6DDA01792B0FBB57AB1</string>
 			<key>IDESourceControlWCCName</key>
 			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3AA508B5C4EC3C1E0276130D9D26F99BABBB1791</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PhotoFilterApp</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

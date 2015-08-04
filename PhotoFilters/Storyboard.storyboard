@@ -2,6 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="esE-pf-vsy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Album Table View Controller-->
@@ -62,6 +65,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="NKq-eJ-caH" kind="show" identifier="DetailSegue" id="H3o-WQ-foR"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -82,6 +88,70 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Hz-KN-bHb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1848" y="233"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="dbs-pb-Meg">
+            <objects>
+                <viewController id="NKq-eJ-caH" customClass="PhotoDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AUJ-hQ-IFr"/>
+                        <viewControllerLayoutGuide type="bottom" id="0QU-Nt-mR2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NNW-U0-34i">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bcG-xX-jgI">
+                                <rect key="frame" x="0.0" y="64" width="600" height="426"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKX-30-ojD">
+                                <rect key="frame" x="497" y="503" width="87" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="qJZ-VS-sYE"/>
+                                </constraints>
+                                <state key="normal" title="Delete">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="NKq-eJ-caH" eventType="touchUpInside" id="mcg-NX-4v7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spT-C1-UUv">
+                                <rect key="frame" x="16" y="503" width="86" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="8rX-dh-XkK"/>
+                                    <constraint firstAttribute="height" constant="31" id="npM-eS-eqh"/>
+                                </constraints>
+                                <state key="normal" title="Add Filter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addFilterButtonPressed:" destination="NKq-eJ-caH" eventType="touchUpInside" id="e1V-24-bYN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WKX-30-ojD" firstAttribute="baseline" secondItem="spT-C1-UUv" secondAttribute="firstBaseline" id="3ma-xo-Vkl"/>
+                            <constraint firstItem="spT-C1-UUv" firstAttribute="top" secondItem="bcG-xX-jgI" secondAttribute="bottom" constant="13" id="Fdr-w5-Vae"/>
+                            <constraint firstItem="0QU-Nt-mR2" firstAttribute="top" secondItem="spT-C1-UUv" secondAttribute="bottom" constant="22" id="G5p-Ys-EHS"/>
+                            <constraint firstItem="spT-C1-UUv" firstAttribute="leading" secondItem="NNW-U0-34i" secondAttribute="leadingMargin" constant="69" id="Z9h-kC-8HB"/>
+                            <constraint firstAttribute="trailing" secondItem="bcG-xX-jgI" secondAttribute="trailing" id="aMh-vj-fhi"/>
+                            <constraint firstItem="WKX-30-ojD" firstAttribute="top" secondItem="spT-C1-UUv" secondAttribute="top" id="grt-ko-T16"/>
+                            <constraint firstItem="spT-C1-UUv" firstAttribute="baseline" secondItem="WKX-30-ojD" secondAttribute="firstBaseline" id="jQN-9D-6ef"/>
+                            <constraint firstItem="bcG-xX-jgI" firstAttribute="leading" secondItem="NNW-U0-34i" secondAttribute="leading" id="sJ4-JV-H2b"/>
+                            <constraint firstItem="bcG-xX-jgI" firstAttribute="top" secondItem="AUJ-hQ-IFr" secondAttribute="bottom" id="tS4-xx-n04"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WKX-30-ojD" secondAttribute="trailing" constant="57" id="vU2-Nc-yD9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="0yq-PY-Rb1"/>
+                    <connections>
+                        <outlet property="imageView" destination="bcG-xX-jgI" id="h7r-Ke-6SK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nBF-9B-sVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2539" y="233"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oKH-J4-GXR">

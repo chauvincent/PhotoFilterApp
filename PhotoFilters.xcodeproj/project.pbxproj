@@ -16,6 +16,8 @@
 		7539EA631B6C760D00E3A586 /* AlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7539EA621B6C760D00E3A586 /* AlbumTableViewController.m */; };
 		7539EA691B6CE46200E3A586 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7539EA681B6CE46200E3A586 /* CoreDataHelper.m */; };
 		7539EA6C1B6CE75F00E3A586 /* PhotosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7539EA6B1B6CE75F00E3A586 /* PhotosCollectionViewController.m */; };
+		75828FFC1B7096A3008D1E05 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75828FFB1B7096A3008D1E05 /* Default-568h@2x.png */; };
+		75828FFF1B7097F7008D1E05 /* PhotoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75828FFE1B7097F7008D1E05 /* PhotoDetailViewController.m */; };
 		75E085401B6EFEC100CD6DC1 /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0853F1B6EFEC100CD6DC1 /* ImageCollectionViewCell.m */; };
 		75E085421B6F02A000CD6DC1 /* Kitten.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 75E085411B6F02A000CD6DC1 /* Kitten.jpg */; };
 		75E0854D1B6F2EC200CD6DC1 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0854C1B6F2EC200CD6DC1 /* Album.m */; };
@@ -51,6 +53,9 @@
 		7539EA681B6CE46200E3A586 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
 		7539EA6A1B6CE75F00E3A586 /* PhotosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosCollectionViewController.h; sourceTree = "<group>"; };
 		7539EA6B1B6CE75F00E3A586 /* PhotosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosCollectionViewController.m; sourceTree = "<group>"; };
+		75828FFB1B7096A3008D1E05 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		75828FFD1B7097F7008D1E05 /* PhotoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailViewController.h; sourceTree = "<group>"; };
+		75828FFE1B7097F7008D1E05 /* PhotoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailViewController.m; sourceTree = "<group>"; };
 		75E0853E1B6EFEC100CD6DC1 /* ImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCollectionViewCell.h; sourceTree = "<group>"; };
 		75E0853F1B6EFEC100CD6DC1 /* ImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCollectionViewCell.m; sourceTree = "<group>"; };
 		75E085411B6F02A000CD6DC1 /* Kitten.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kitten.jpg; sourceTree = "<group>"; };
@@ -83,6 +88,7 @@
 		7539EA2A1B6C696B00E3A586 = {
 			isa = PBXGroup;
 			children = (
+				75828FFB1B7096A3008D1E05 /* Default-568h@2x.png */,
 				7539EA351B6C696B00E3A586 /* PhotoFilters */,
 				7539EA521B6C696B00E3A586 /* PhotoFiltersTests */,
 				7539EA341B6C696B00E3A586 /* Products */,
@@ -102,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				7539EA5F1B6C752A00E3A586 /* Storyboard.storyboard */,
+				75828FFD1B7097F7008D1E05 /* PhotoDetailViewController.h */,
+				75828FFE1B7097F7008D1E05 /* PhotoDetailViewController.m */,
 				75E0853E1B6EFEC100CD6DC1 /* ImageCollectionViewCell.h */,
 				75E0853F1B6EFEC100CD6DC1 /* ImageCollectionViewCell.m */,
 				7539EA6A1B6CE75F00E3A586 /* PhotosCollectionViewController.h */,
@@ -241,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7539EA471B6C696B00E3A586 /* Images.xcassets in Resources */,
+				75828FFC1B7096A3008D1E05 /* Default-568h@2x.png in Resources */,
 				7539EA601B6C752A00E3A586 /* Storyboard.storyboard in Resources */,
 				75E085421B6F02A000CD6DC1 /* Kitten.jpg in Resources */,
 			);
@@ -261,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7539EA691B6CE46200E3A586 /* CoreDataHelper.m in Sources */,
+				75828FFF1B7097F7008D1E05 /* PhotoDetailViewController.m in Sources */,
 				7539EA3F1B6C696B00E3A586 /* PhotoFilters.xcdatamodeld in Sources */,
 				7539EA631B6C760D00E3A586 /* AlbumTableViewController.m in Sources */,
 				7539EA6C1B6CE75F00E3A586 /* PhotosCollectionViewController.m in Sources */,

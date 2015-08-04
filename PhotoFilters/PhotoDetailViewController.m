@@ -7,6 +7,7 @@
 //
 
 #import "PhotoDetailViewController.h"
+#import "Photo.h"
 
 @interface PhotoDetailViewController ()
 
@@ -16,9 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
 }
-
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    self.imageView.image = self.photo.image;
+    
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -34,4 +42,18 @@
 }
 */
 
+- (IBAction)addFilterButtonPressed:(id)sender {
+}
+
+- (IBAction)deleteButtonPressed:(id)sender
+{
+    [[self.photo managedObjectContext] deleteObject:self.photo];
+    [self.navigationController popViewControllerAnimated:YES];
+    
+    NSError *error = nil;
+    [[self.photo managedObjectContext] save:&error];
+
+    if(error)
+        NSLog(@"error");
+}
 @end
