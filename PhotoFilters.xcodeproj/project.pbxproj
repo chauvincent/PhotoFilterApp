@@ -23,6 +23,7 @@
 		75E0854D1B6F2EC200CD6DC1 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0854C1B6F2EC200CD6DC1 /* Album.m */; };
 		75E085501B6F2EC300CD6DC1 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E0854F1B6F2EC300CD6DC1 /* Photo.m */; };
 		75E085541B6F2F7500CD6DC1 /* PictureDataTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E085531B6F2F7500CD6DC1 /* PictureDataTransformer.m */; };
+		75EE48C81B70C4D900BB00A0 /* FilterCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EE48C71B70C4D900BB00A0 /* FilterCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		75E0854F1B6F2EC300CD6DC1 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		75E085521B6F2F7500CD6DC1 /* PictureDataTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureDataTransformer.h; sourceTree = "<group>"; };
 		75E085531B6F2F7500CD6DC1 /* PictureDataTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureDataTransformer.m; sourceTree = "<group>"; };
+		75EE48C61B70C4D900BB00A0 /* FilterCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterCollectionViewController.h; sourceTree = "<group>"; };
+		75EE48C71B70C4D900BB00A0 /* FilterCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				7539EA5F1B6C752A00E3A586 /* Storyboard.storyboard */,
+				75EE48C61B70C4D900BB00A0 /* FilterCollectionViewController.h */,
+				75EE48C71B70C4D900BB00A0 /* FilterCollectionViewController.m */,
 				75828FFD1B7097F7008D1E05 /* PhotoDetailViewController.h */,
 				75828FFE1B7097F7008D1E05 /* PhotoDetailViewController.m */,
 				75E0853E1B6EFEC100CD6DC1 /* ImageCollectionViewCell.h */,
@@ -273,6 +278,7 @@
 				75828FFF1B7097F7008D1E05 /* PhotoDetailViewController.m in Sources */,
 				7539EA3F1B6C696B00E3A586 /* PhotoFilters.xcdatamodeld in Sources */,
 				7539EA631B6C760D00E3A586 /* AlbumTableViewController.m in Sources */,
+				75EE48C81B70C4D900BB00A0 /* FilterCollectionViewController.m in Sources */,
 				7539EA6C1B6CE75F00E3A586 /* PhotosCollectionViewController.m in Sources */,
 				7539EA3C1B6C696B00E3A586 /* AppDelegate.m in Sources */,
 				75E0854D1B6F2EC200CD6DC1 /* Album.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "PhotoDetailViewController.h"
 #import "Photo.h"
+#import "FilterCollectionViewController.h"
 
 @interface PhotoDetailViewController ()
 
@@ -32,17 +33,27 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"FilterSegue"])
+        if ([segue.destinationViewController isKindOfClass:[FilterCollectionViewController class]])
+        {
+            FilterCollectionViewController *nextVC = segue.destinationViewController;
+            nextVC.photo = self.photo;
+        }
+
+
+
 }
-*/
+
 
 - (IBAction)addFilterButtonPressed:(id)sender {
+    [self performSegueWithIdentifier:@"FilterSegue" sender:sender];
 }
 
 - (IBAction)deleteButtonPressed:(id)sender
