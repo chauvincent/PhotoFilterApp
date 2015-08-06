@@ -102,7 +102,8 @@ static NSString * const reuseIdentifier = @"PhotoCell";
     
     UIImage *finalImage = [UIImage imageWithCGImage:cgImage];
     
-    return finalImage; }
+    return finalImage;
+}
 
 
 /*
@@ -130,14 +131,40 @@ static NSString * const reuseIdentifier = @"PhotoCell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
     cell.backgroundColor = [UIColor whiteColor];
-    cell.imageView.image = [self filteredImageFromImage:self.photo.image andFilter:self.filters[indexPath.row]];
+    
+    dispatch_queue_t filterQ = dispatch_queue_create("filter queue", NULL);
+    
+    // push this queue on another thread
+    dispatch_async(filterQ,
+    ^{
+        UIImage *filteredImage = [self filteredImageFromImage:self.photo.image andFilter:self.filters[indexPath.row]];
+        // go back to main thread
+        dispatch_async(dispatch_get_main_queue(),
+        ^{
+            cell.imageView.image = filteredImage;
+        });
+    });
+    
+    //cell.imageView.image = [self filteredImageFromImage:self.photo.image andFilter:self.filters[indexPath.row]];
     
     return cell;
 }
 
 #pragma mark <UICollectionViewDelegate>
-
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    ImageCollectionViewCell *selectedCell = (ImageCollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    
+    self.photo.image = selectedCell.imageView.image;
+    NSError *error = nil;
+    
+    if (![[self.photo managedObjectContext] save:&error]) {
+        NSLog(@"Error");
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+}
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {

@@ -53,7 +53,6 @@
 
 
 - (IBAction)addFilterButtonPressed:(id)sender {
-    [self performSegueWithIdentifier:@"FilterSegue" sender:sender];
 }
 
 - (IBAction)deleteButtonPressed:(id)sender
